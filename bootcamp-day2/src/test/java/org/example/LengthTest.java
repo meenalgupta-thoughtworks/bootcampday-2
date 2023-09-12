@@ -24,7 +24,7 @@ class LengthTest {
     public void showNonEqualIfCentimeterIsEqualToOtherCentimeterTest() {
         final Length c1 = Length.createCentimeter(10);
         final Length c2 = Length.createCentimeter(100);
-        assertFalse(c1.equals(c2));
+        assertNotEquals(c1, c2);
     }
 
     @Test
@@ -46,11 +46,16 @@ class LengthTest {
         final Length c = Length.createCentimeter(100);
         final Length m = Length.createMeter(1);
 
-        float result = c.addTheUnits(m);
-
-
+        String result = c.addTheUnits(m);
+        assertEquals("200.0CM", result);
     }
 
+    @Test
+    public void show2MetersWhenInputIs1metersAnd100Centimeter() {
+        final Length c = Length.createCentimeter(100);
+        final Length m = Length.createMeter(1);
 
-
+        String result = m.addTheUnits(c);
+        assertEquals("2.0M", result);
+    }
 }

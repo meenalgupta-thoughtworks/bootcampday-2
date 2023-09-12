@@ -11,6 +11,6 @@ public enum Units {
     }
 
     public double convertTo(Units targetUnit, double value) {
-        return value * (targetUnit.conversionFactor / this.conversionFactor);
+        return value * (this.conversionFactor / targetUnit.conversionFactor);
     }
 }

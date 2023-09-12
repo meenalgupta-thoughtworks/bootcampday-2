@@ -4,31 +4,31 @@ import java.util.Objects;
 
 public class Length {
 
-    private final int magnitude;
-    private final String unit;
+    private final float magnitude;
+    private final Units unit;
 
-    public Length(int magnitude, String unit) {
+    public Length(float magnitude, Units unit) {
         this.magnitude = magnitude;
         this.unit = unit;
     }
 
     public static Length createCentimeter(int magnitude) {
-        return new Length(magnitude, "cm");
+        return new Length(magnitude, Units.CM);
     }
 
     public static Length createMeter(int magnitude) {
-        return new Length(magnitude, "m");
+        return new Length(magnitude, Units.M);
     }
 
     public Boolean isCentimeterEqualsToMeter(float cm, float m) {
         return m * 100 == cm || cm / 100 == m;
     }
 
-    public int getMagnitude() {
+    public float getMagnitude() {
         return magnitude;
     }
 
-    public String getUnit() {
+    public Units getUnit() {
         return unit;
     }
 
@@ -45,9 +45,8 @@ public class Length {
         return Objects.hash(magnitude, unit);
     }
 
-    public float addTheUnits(Length value) {
-
-        float result = Units.M.convertTo(value.unit, value);
-
+    public String addTheUnits(Length value) {
+        float result = (float) ((this.unit).convertTo(value.unit, value.magnitude)) + this.magnitude;
+        return result + this.unit.toString();
     }
 }
