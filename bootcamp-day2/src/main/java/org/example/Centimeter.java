@@ -24,4 +24,10 @@ public class Centimeter {
     public int hashCode() {
         return Objects.hash(magnitude, unit);
     }
+
+    public String returnEqualIfEqual(Centimeter c2) {
+        if(this.equals(c2)) {
+            return "Equal";
+        } return "Not Equal";
+    }
 }

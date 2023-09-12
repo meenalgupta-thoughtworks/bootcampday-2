@@ -5,18 +5,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CentimeterTest {
-
     @Test
-    public void passTheCaseIfCentimeterIsEqualTest() {
+    public void showEqualIfCentimeterIsEqual() {
         Centimeter c1 = new Centimeter(1, "cm");
         Centimeter c2 = new Centimeter(1, "cm");
-        assertTrue(c1.equals(c2));
+        assertEquals("Equal", c1.returnEqualIfEqual(c2));
     }
 
     @Test
-    public void failTheCaseIfCentimeterIsNotEqualTest() {
+    public void showNotEqualIfCentimeterIsEqual() {
         Centimeter c1 = new Centimeter(1, "cm");
         Centimeter c2 = new Centimeter(1, "mm");
-        assertFalse(c1.equals(c2));
+        assertEquals("Not Equal", c1.returnEqualIfEqual(c2));
     }
 }
