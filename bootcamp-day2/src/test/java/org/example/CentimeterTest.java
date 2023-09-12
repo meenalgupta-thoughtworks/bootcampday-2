@@ -5,19 +5,24 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CentimeterTest {
-
-    // rename the test methods, actions -> output
     @Test
     public void showEqualIfCentimeterIsEqualToOtherCentimeterTest() {
-        Centimeter c1 = new Centimeter(1);
-        Centimeter c2 = new Centimeter(1);
+
+        final Measurement c1 = Measurement.createCentimeter(100);
+        final Measurement c2 = Measurement.createCentimeter(100);
         assertEquals(c1, c2);
     }
 
     @Test
+    public void showEqualIfCentimeterIsSameToOtherCentimeterTest() {
+        final Measurement c1 = Measurement.createCentimeter(100);
+        assertEquals(c1, c1);
+    }
+
+    @Test
     public void showNonEqualIfCentimeterIsEqualToOtherCentimeterTest() {
-        Centimeter c1 = new Centimeter(1);
-        Centimeter c2 = new Centimeter(2);
+        final Measurement c1 = Measurement.createCentimeter(10);
+        final Measurement c2 = Measurement.createCentimeter(100);
         assertFalse(c1.equals(c2));
     }
 }

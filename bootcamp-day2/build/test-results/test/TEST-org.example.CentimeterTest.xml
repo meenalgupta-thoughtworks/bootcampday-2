@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.example.CentimeterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-09-12T05:30:25" hostname="Meenals-MacBook-Pro.local" time="0.011">
+<testsuite name="org.example.CentimeterTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-09-12T06:27:33" hostname="Meenals-MacBook-Pro.local" time="0.011">
   <properties/>
-  <testcase name="passTheCaseIfCentimeterIsEqualTest()" classname="org.example.CentimeterTest" time="0.01"/>
-  <testcase name="failTheCaseIfCentimeterIsNotEqualTest()" classname="org.example.CentimeterTest" time="0.0"/>
+  <testcase name="showNonEqualIfCentimeterIsEqualToOtherCentimeterTest()" classname="org.example.CentimeterTest" time="0.009"/>
+  <testcase name="showEqualIfCentimeterIsSameToOtherCentimeterTest()" classname="org.example.CentimeterTest" time="0.001"/>
+  <testcase name="showEqualIfCentimeterIsEqualToOtherCentimeterTest()" classname="org.example.CentimeterTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
