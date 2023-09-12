@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Objects;
+
 public class Centimeter {
 
     private final int magnitude;
@@ -10,5 +12,16 @@ public class Centimeter {
         this.unit = unit;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Centimeter that = (Centimeter) o;
+        return magnitude == that.magnitude && Objects.equals(unit, that.unit);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(magnitude, unit);
+    }
 }

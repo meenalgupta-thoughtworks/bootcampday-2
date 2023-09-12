@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.example.CentimeterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-12T04:37:26" hostname="Meenals-MacBook-Pro.local" time="0.007">
+<testsuite name="org.example.CentimeterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-12T04:46:56" hostname="Meenals-MacBook-Pro.local" time="0.008">
   <properties/>
-  <testcase name="showEqualIfCentimeterIsEqualTest()" classname="org.example.CentimeterTest" time="0.007"/>
+  <testcase name="failTheCaseIfCentimeterIsNotEqualTest()" classname="org.example.CentimeterTest" time="0.008"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
