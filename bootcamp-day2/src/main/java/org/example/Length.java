@@ -2,22 +2,22 @@ package org.example;
 
 import java.util.Objects;
 
-public class Measurement {
+public class Length {
 
     private final int magnitude;
     private final String unit;
 
-    public Measurement(int magnitude, String unit) {
+    public Length(int magnitude, String unit) {
         this.magnitude = magnitude;
         this.unit = unit;
     }
 
-    public static Measurement createCentimeter(int magnitude) {
-        return new Measurement(magnitude, "cm");
+    public static Length createCentimeter(int magnitude) {
+        return new Length(magnitude, "cm");
     }
 
-    public static Measurement createMeter(int magnitude) {
-        return new Measurement(magnitude, "m");
+    public static Length createMeter(int magnitude) {
+        return new Length(magnitude, "m");
     }
 
     public Boolean isCentimeterEqualsToMeter(float cm, float m) {
@@ -36,7 +36,7 @@ public class Measurement {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Measurement that = (Measurement) o;
+        Length that = (Length) o;
         return magnitude == that.magnitude && Objects.equals(unit, that.unit);
     }
 
