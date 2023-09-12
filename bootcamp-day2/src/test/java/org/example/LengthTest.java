@@ -40,4 +40,17 @@ class LengthTest {
         final Length m = Length.createMeter(1);
         assertFalse(c.isCentimeterEqualsToMeter(c.getMagnitude(), m.getMagnitude()));
     }
+
+    @Test
+    public void show200CentimetersWhenInputIs100CentimetersAnd1Meter() {
+        final Length c = Length.createCentimeter(100);
+        final Length m = Length.createMeter(1);
+
+        float result = c.addTheUnits(m);
+
+
+    }
+
+
+
 }

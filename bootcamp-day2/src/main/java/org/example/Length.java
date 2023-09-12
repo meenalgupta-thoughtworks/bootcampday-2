@@ -44,4 +44,10 @@ public class Length {
     public int hashCode() {
         return Objects.hash(magnitude, unit);
     }
+
+    public float addTheUnits(Length value) {
+
+        float result = Units.M.convertTo(value.unit, value);
+
+    }
 }

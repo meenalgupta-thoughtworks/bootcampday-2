@@ -1,9 +1,16 @@
 package org.example;
 
 public enum Units {
-    CM("cm"),
-    M("m");
+    CM(100f),
+    M(1f);
 
-    Units(String cm) {
+    private final double conversionFactor;
+
+    Units(float conversionFactor) {
+        this.conversionFactor = conversionFactor;
+    }
+
+    public double convertTo(Units targetUnit, double value) {
+        return value * (targetUnit.conversionFactor / this.conversionFactor);
     }
 }
